@@ -1,5 +1,7 @@
 import json
-import urllib.request, urllib.parse, urllib.error
+import urllib.request
+import urllib.parse
+import urllib.error
 
 address = input('Enter location: ')
 if len(address) < 1:
@@ -10,7 +12,7 @@ print('Retrieving', address)
 uh = urllib.request.urlopen(address)
 data = uh.read()
 print('Retrieved', len(data), 'characters')
-#print(data.decode())
+# print(data.decode())
 
 jsonData = json.loads(data)
 
